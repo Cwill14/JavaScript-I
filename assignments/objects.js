@@ -64,9 +64,12 @@ console.log(antonietta.gender);
 // ==== Challenge 3: Object Methods ==== 
 // Give Kennan the ability to say "Hello, my name is Kennan!" Use the console.log provided as a hint.
 // console.log(kennan.speak());
-
+kennan.speak = function(){
+  "Hello, my name is Kennan!";
+}
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
 //console.log(antonietta.multiplyNums(3,4));
+antonietta.multiplyNums = (num1, num2) => num1 * num2;
 
 // === Great work! === Head over to the the arrays.js file or take a look at the stretch challenge
 
