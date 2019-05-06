@@ -65,31 +65,34 @@ let inventory = [{"id":1,"car_make":"Lincoln","car_model":"Navigator","car_year"
 // The dealer can't recall the information for a car with an id of 33 on his lot. Help the dealer find out which car has an id of 33 by logging the car's year, make, and model in the console log provided to you below:
 
 
-// function lookUp(idNum) {
-//     // let car_make = "";
-//     for(let i = 0; i < inventory.length; i++){
-//         if(i.id === idNum){
-//             return i.car_make, i.car_model;
+
+
+// function lookUp(idNum, arr) {
+//     for(let i = 0; i < arr.length; i++){ 
+//         let carMake = "";
+//         let carModel = "";
+//         if(arr[i].id === idNum){
+//             carMake = arr[i].car_make;
+//             carModel = arr[i].car_model;
 //         }
-//     }
+//         console.log(`Car ${idNum} is a ${carMake} ${carModel}`);
+//     } 
 // }
+// lookUp(33, inventory);
 
-// inventory.forEach(
-//     if(inventory.id === 33){
-
-//     }
-// )
-
-
-
-
-
-console.log(`Car 33 is a *car make goes here* *car model goes here*`);
+function lookUp(idNum, arr) {
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].id === idNum){
+            console.log(`Carr ${arr[i].id} is a ${arr[i].car_make} ${arr[i].car_model}`)
+        }
+    }
+}
+lookUp(33, inventory);
 
 // ==== Challenge 2 ====
 // The dealer needs the information on the last car in their inventory.  What is the make and model of the last car in the inventory?  Log the make and model into the console.
-let lastCar = 0;
-console.log();
+let lastCar = inventory.id === inventory.length + 1;
+console.log(lastCar.car_make, lastCar.car_model);
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
